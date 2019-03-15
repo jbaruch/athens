@@ -19,6 +19,6 @@ In Athens we support many storage options. In this section we'll describe how th
 
 
  ### Upstream proxy
- In this section we'll describe how the upstream proxy  can be configured to fetch all modules from modules repository like JFrog Gocenter.
+ In this section we'll describe how the upstream proxy  can be configured to fetch all modules from Go modules repository such as Gocenter.
 
   - [Upstream](/configuration/upstream)
