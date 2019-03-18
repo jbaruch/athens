@@ -46,7 +46,7 @@ CloudRuntime = "none"
 # To point Athens to an upstream proxy to fetch modules,
 # set GlobalEndPoint to "https://<url_to_upstream>" (such as https://gocenter.io)
 # and also ensure that FilterFile is configured for direct access to all modules i.e.
-# the value is set to a fully qualified file name that contains the letter "D" in the first line.
+# the value is set to a fully qualified file name that contains the letter `D` (for "Direct Access") in the first line.
 FilterFile = ""
 
 # Timeout is the timeout for external network calls in seconds
