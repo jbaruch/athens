@@ -6,39 +6,27 @@ weight: 1
 
 The upstream proxy used when fetching modules directly is by default the actual source, e.g github.com. This can be configured to use a modules repository like JFrog GoCenter.
 
-1. Create a filter file (e.g /usr/local/lib/FilterForGoCenter) with letter "D" in first line.
+1. Create a filter file (e.g `/usr/local/lib/UpstreamFilter`) with letter `D` in first line. //TODO Explain why D?
 
-```
-# FilterFile for fetching modules directly from upstream
-D
-```
-2. If you are not using a config file, create a new config file (based on the sample config.dev.toml and edit values to match your environment).
-Additionally in the config file, set the following parameters as suggested:
+    ```
+    # FilterFile for fetching modules directly from upstream
+    D
+   ```
 
-```
-FilterFile = "/usr/local/lib/FilterForGoCenter"
-GlobalEndpoint = "https://gocenter.io"
-```
+1. //TODO where is this config file? How do I know if I use one?
 
-3. Restart Athens specifying the new config file.
+    If you are not using a config file, create a new config file (based on the sample `config.dev.toml` and edit values to match your environment).
+    Additionally (//TODO "additionally" to what?) in the config file, set the following parameters as suggested:
 
-e.g **.```
-/proxy  -config_file <path-to new-configfile>
-```**
-You should see
+    ```
+    FilterFile = "/path/to/UpstreamFilter"
+    GlobalEndpoint = "https://linktoyourupsteam" 
+    ```
 
+1. Restart Athens specifying the new config file. //TODO you asked to create a new config file only if one doesn't use a config, so it won't be new
 
-INFO[0000] Exporter not specified. Traces won't be exported
+    ```
+    /proxy  -config_file <path-to new-configfile>
+    ```
 
-2019-03-14 14:11:58.492060 I | Starting application at port :3000
-
-4. To verify, follow the same instructions to get up the go environment variable:
-
-              GO111MODULE=on, and
-              GOPROXY=http://127.0.0.1:3000
-
-And go through the same walkthrough example.
-
-5. If you see messages display status code [303], Athens is redirecting to GoCenter.
-
-6. If you get 404, it means the module is not found in GoCenter. Please access GoCenter via https://gocenter.io and add your module for inclusion,
+1. Configure your environment to work with Athens and run an example build as specified in Getting Started. If you see messages display status code `303`, Athens is redirecting to the upstream you specified.
