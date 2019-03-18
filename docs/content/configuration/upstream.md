@@ -13,7 +13,7 @@ The upstream proxy used when fetching modules directly is by default the actual 
 D
 ```
 2. If you are not using a config file, create a new config file (based on the sample config.dev.toml and edit values to match your environment).
-Additionally in the config file, set the following parameters as suggested:
+Additionally in the current or new config file, set the following parameters as suggested:
 
 ```
 FilterFile = "/usr/local/lib/FilterForGoCenter"
@@ -21,10 +21,10 @@ GlobalEndpoint = "https://<url_to_uptream>"
 # To use GoCenter for example, replace <url_to_upstream> with gocenter.io
 ```
 
-3. Restart Athens specifying the new config file.
+3. Restart Athens specifying the updated current or new config file.
 
 e.g **.```
-/proxy  -config_file <path-to new-configfile>
+/proxy  -config_file <path-to updated  current or new configfile>
 ```**
 You should see
 
