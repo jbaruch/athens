@@ -42,4 +42,4 @@ And go through the same walkthrough example.
 
 5. If you see messages display status code [303], Athens is redirecting to GoCenter.
 
-6. If you get 404, it means the module is not found in GoCenter. Please access GoCenter via https://gocenter.io and add your module for inclusion,
+6. If you get 404, it means the module is not found in GoCenter. Please access GoCenter via https://gocenter.io and add your module for inclusion.
